@@ -3,3 +3,5 @@ langchain_openai
 langchain
 load-dotenv
 pydantic
+fastapi
+uvicorn[standard]
