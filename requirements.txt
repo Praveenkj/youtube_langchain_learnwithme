@@ -5,3 +5,11 @@ load-dotenv
 pydantic
 fastapi
 uvicorn[standard]
+# langchain community
+langchain-community
+# unstructured packages
+langchain-unstructured
+unstructured-client
+unstructured
+unstructured[pdf]
+python-magic

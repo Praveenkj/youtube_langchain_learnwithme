@@ -1,0 +1,11 @@
+Brand,Model,Year,Engine_CC,Fuel_Type,Transmission,Price_Lakh,Mileage_kmpl
+Maruti Suzuki,Swift,2023,1197,Petrol,Manual,8.5,22.3
+Hyundai,Creta,2024,1497,Diesel,Automatic,17.8,19.1
+Tata,Nexon EV,2023,0,Electric,Automatic,15.9,320 km/charge
+Mahindra,Scorpio N,2024,2198,Diesel,Manual,20.3,16.2
+Honda,Amaze,2022,1199,Petrol,CVT,9.7,18.6
+Kia,Seltos,2024,1493,Diesel,Automatic,18.9,19.8
+Toyota,Innova Hycross,2023,1987,Hybrid,Automatic,28.5,21.1
+Skoda,Slavia,2024,1498,Petrol,Manual,15.4,19.5
+Renault,Kiger,2023,999,Petrol,AMT,8.1,20.5
+MG,Hector,2024,1451,Petrol,Automatic,19.6,17.0
