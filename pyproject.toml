@@ -1,0 +1,20 @@
+[project]
+name = "youtube-langchain-learnwithme"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.121.1",
+    "langchain>=0.3.27",
+    "langchain-community>=0.3.31",
+    "langchain-google-genai>=2.1.12",
+    "langchain-openai>=0.3.35",
+    "langchain-unstructured>=0.1.6",
+    "load-dotenv>=0.1.0",
+    "pydantic>=2.12.4",
+    "unstructured[pdf]>=0.18.18",
+    "unstructured-client>=0.42.3",
+    "uvicorn[standard]>=0.38.0",
+    "python-magic>=0.4.27",
+]
