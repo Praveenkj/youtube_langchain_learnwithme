@@ -17,4 +17,10 @@ dependencies = [
     "unstructured-client>=0.42.3",
     "uvicorn[standard]>=0.38.0",
     "python-magic>=0.4.27",
+    "faiss-cpu>=1.12.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipywidgets>=8.1.8",
 ]
