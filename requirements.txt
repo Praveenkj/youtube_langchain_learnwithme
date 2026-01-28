@@ -13,3 +13,4 @@ unstructured[pdf]
 python-magic
 # langchain community
 # unstructured packages
+google-generativeai
