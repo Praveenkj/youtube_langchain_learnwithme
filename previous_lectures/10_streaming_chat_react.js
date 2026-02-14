@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { fetchEventSource } from "@microsoft/fetch-event-source";
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 export default function Stream() {
   const [messages, setMessages] = useState([]);
@@ -93,7 +95,39 @@ export default function Stream() {
         {messages.map((message, index) => (
           <div key={index} style={{ marginBottom: "10px" }}>
             <strong>{message.type === "user" ? "You: " : "AI: "}</strong>
-            {message.content}
+            {/* {message.content} */}
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              components={{
+                a: ({ node, ...props }) => (
+                  <a
+                    {...props}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  />
+                ),
+                table: ({ node, ...props }) => (
+                  <table
+                    {...props}
+                    className="block max-h-[500px] overflow-auto min-w-full border-collapse whitespace-nowrap"
+                  />
+                ),
+                th: ({ node, ...props }) => (
+                  <th
+                    {...props}
+                    className="sticky top-0 z-10 border px-4 py-2 text-left bg-gray-100 text-gray-600 whitespace-nowrap"
+                  />
+                ),
+                td: ({ node, ...props }) => (
+                  <td
+                    {...props}
+                    className="border px-4 py-2 whitespace-nowrap"
+                  />
+                ),
+              }}
+            >
+              {message.content}
+            </ReactMarkdown>
           </div>
         ))}
         {isLoading && <div>AI is typing...</div>}

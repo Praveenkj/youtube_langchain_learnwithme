@@ -13,14 +13,14 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 
 google_llm = ChatGoogleGenerativeAI(
     temperature=0, 
-    model="gemini-2.0-flash", 
+    model="gemini-2.5-flash", 
     api_key=google_api_key,
-    max_tokens=200
+    # max_tokens=200
 )
 
 openai_llm = ChatOpenAI(
     temperature=0, 
-    model="gpt-4", 
+    model="gpt-4o", 
     api_key=openai_api_key
 )
 
@@ -60,7 +60,7 @@ async def chat_endpoint(request: Request):
         Answer:"""
     )
 
-    chat_chain = prompt | openai_llm | StrOutputParser()
+    chat_chain = prompt | google_llm | StrOutputParser()
 
     # res = chat_chain.invoke({"question": user_input})
     # return JSONResponse({"answer": res})
